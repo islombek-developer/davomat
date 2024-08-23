@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Ro'yxatdan o'tish</title>
+</head>
+<body>
+    <h2>Ro'yxatdan o'tish</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Foydalanuvchi nomi:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Parol:</label>
+        <input type="password" id="password" name="password" required>
+<!--        <br>-->
+<!--        <label for="email">Email:</label>-->
+<!--        <input type="email" id="email" name="email" required>-->
+<!--        <br>-->
+        <a href=""></a><button type="submit">Ro'yxatdan o'tish</button>
+    </form>
+    <p>Hisobingiz bormi? <a href="{% url 'login_user' %}">Kirish</a></p>
+</body>
+</html>
+

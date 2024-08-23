@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block content %}
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xodimni Yangilash</title>
+</head>
+<body>
+    <h1>Xodimni Yangilash</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="ism">Ism:</label><br>
+        <input type="text" id="ism" name="ism" value="{{ xodim.ism }}"><br><br>
+
+        <label for="familiya">Familiya:</label><br>
+        <input type="text" id="familiya" name="familiya" value="{{ xodim.familiya }}"><br><br>
+
+        <label for="lavozimi">Lavozimi:</label><br>
+        <input type="text" id="lavozimi" name="lavozimi" value="{{ xodim.lavozimi }}"><br><br>
+
+        <label for="bolim">Bo'lim:</label><br>
+        <input type="text" id="bolim" name="bolim" value="{{ xodim.bolim }}"><br><br>
+
+        <label for="telefon_raqami">Telefon Raqami:</label><br>
+        <input type="text" id="telefon_raqami" name="telefon_raqami" value="{{ xodim.telefon_raqami }}"><br><br>
+
+        <button type="submit">Yangilash</button>
+    </form>
+</body>w
+</html>
+{% endblock %}

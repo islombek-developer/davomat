@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% block content %}
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xodim Yaratish</title>
+</head>
+<body>
+    <h1>Yangi Xodimni Qo'shish</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div>
+            <label for="ism">Ism:</label>
+            <input type="text" id="ism" name="ism" required>
+        </div>
+
+        <div>
+            <label for="familiya">Familiya:</label>
+            <input type="text" id="familiya" name="familiya" required>
+        </div>
+
+        <div>
+            <label for="lavozim">Lavozim:</label>
+            <input type="text" id="lavozim" name="lavozim" required>
+        </div>
+
+        <div>
+            <label for="bolim">Bo'lim:</label>
+            <input type="text" id="bolim" name="bolim" required>
+        </div>
+
+        <div>
+            <label for="telfon_raqam">Telefon raqami:</label>
+            <input type="text" id="telfon_raqam" name="telfon_raqami" required>
+        </div>
+
+        <button type="submit">Qo'shish</button>
+    </form>
+
+    <a href="{% url 'xodim_list' %}">Xodimlar ro'yxatiga qaytish</a>
+</body>
+</html>
+{% endblock %}

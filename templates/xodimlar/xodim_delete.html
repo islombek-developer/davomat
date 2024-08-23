@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xodimni O'chirish</title>
+</head>
+<body>
+    <h1>Xodimni O'chirish</h1>
+    <p>Bu xodimni o'chirmoqchimisiz: {{ Xodim.ism }} {{ Xodim.familiya }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">O'chirish</button>
+    </form>
+</body>
+</html>
+{% endblock %}
